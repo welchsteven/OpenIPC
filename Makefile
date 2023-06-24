@@ -221,8 +221,7 @@ VPATH		:= $(srctree)$(if $(KBUILD_EXTMOD),:$(KBUILD_EXTMOD))
 
 export srctree objtree VPATH
 
-SSTAR_CHIP_FILE := '.sstar_chip.txt'
-SSTAR_CHIP_MODEL := $(strip $(shell cat $(SSTAR_CHIP_FILE)))
+SSTAR_CHIP_MODEL ?= infinity6b0
 
 # SUBARCH tells the usermode build what the underlying arch is.  That is set
 # first, and if a usermode build is happening, the "ARCH=um" on the command
